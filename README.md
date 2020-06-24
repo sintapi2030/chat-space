@@ -29,8 +29,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
-|mail|string|null: false, foreign_key: true|
+|name|string|null: false|
+|mail|string|null: false|
 |password|string|null: false|
 ### Association
 - has_many :comments
@@ -41,7 +41,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|member|integer|null: false|
+|add|integer|null: false|
 ### Association
 - has_many :comments
 - has_many :users, through: :users_groups
@@ -50,8 +50,8 @@ Things you may want to cover:
 ## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|content|integer|null: false, foreign_key: true|
+|content|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group 
@@ -60,9 +60,10 @@ Things you may want to cover:
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_comment|string|
-|image|string|
-|user_id|integer|foreign_key: true|
+|content|string|
+|image|string|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|groups_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
