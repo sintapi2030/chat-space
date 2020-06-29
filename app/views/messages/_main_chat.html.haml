@@ -1,0 +1,30 @@
+.Chat-main
+  .Chat-main_group-info
+    .Chat-main_group-info_bunch
+      .Chat-main_group-info_bunch_name
+        test
+      %ul.Chat-main_group-info_bunch_list
+        Member:
+        %li.Chat-main_group-info_bunch_member
+          masa
+    .Chat-main_group-info_bunch_edit
+      = link_to "#", class: "Edit_btn" do
+        Edit
+  .Chat-main_message-list
+    .Chat-main_message-list_box
+      .Chat-main_message-list_box_info
+        .Chat-main_message-list_box_infoName
+          masa
+        .Chat-main_message-list_box_info_date
+          2012-12-21(san)12:22:12
+      .Chat-main_message-list_box_message
+        %p.Chat-main_message-list_box_message_content
+          おはよう
+  .Chat-main_message-form
+    .Chat-main_message-form_content
+      %form.Chat-main_message-form_content_bunch
+        %input.Chat-main_message-form_content_bunch_input{type: :"text", placeholder: :"type a mesaage"}
+        %label{class: "input-box_image"}
+          = icon('far', 'image')
+          %input{type: :"file"}
+      %input.Chat-main_message-form_content_send{type: :"submit", value: :"Send"}
