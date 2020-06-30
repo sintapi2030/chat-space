@@ -28,10 +28,14 @@
         font-weight: bold;
       }
       &_icons{
-        .Icon__btn{
+        display: flex;
+        justify-content: end;
+        &_btn{
+          margin-left: 5px;
+          a{
           color: #ffffff;
           text-decoration: none;
-          margin-left: 5px;
+          }
         }
       }
     }

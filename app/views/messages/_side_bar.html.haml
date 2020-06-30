@@ -2,12 +2,14 @@
   .Side-bar_user-name
     .Side-bar_user-name_top-items
       %h3.Side-bar_user-name_top-items_name  
-        masa
-      .Side-bar_user-name_top-items_icons
-        = link_to "#", class: "Icon__btn" do
-          = icon('fas', 'edit', class: 'Icon__btn-icon')
-        = link_to "#", class: "Icon__btn" do
-          = icon('fas', 'cog', class: 'Icon__btn-icon')
+        = current_user.name
+      %ul.Side-bar_user-name_top-items_icons
+        %li.Side-bar_user-name_top-items_icons_btn
+          = link_to "#" do
+            = icon('fas', 'edit')
+        %li.Side-bar_user-name_top-items_icons_btn
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog')
   .Side-bar_group-list
     .Side-bar_group-list_block
       = link_to "#", class: "list_block_btn" do
