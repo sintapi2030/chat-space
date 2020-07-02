@@ -124,9 +124,12 @@
       }
       .Message{
         margin-top: 12px;
-        &_content{
+        &__content{
           color: #434a54;
           font-size: 14px;
+        }
+        &__image{
+          height: 300px;
         }
       }
     }
