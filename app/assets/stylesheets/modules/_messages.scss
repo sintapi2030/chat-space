@@ -47,7 +47,7 @@
     &_block{
       padding: 20px 0 40px ;
       box-sizing: border-box;
-      .list_block_btn{
+      .btn{
         text-decoration: none;
         color: #ffffff;
         .list_block-name{
@@ -97,6 +97,7 @@
         margin-top: 28px;
         height: 40px;
         line-height: 40px;
+        text-decoration: none;
         }
       }
     }  
@@ -105,22 +106,23 @@
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
     padding: 35px 40px 0;
-    &_box{
+    overflow: scroll;
+    .MessageBox{
       margin-bottom: 46px;
-      &_info{
+      .MessageInfo{
         display: flex;
-        &Name{
+        &__userName{
           color: #333333;
           font-size: 16px;
           font-weight: bold;
         }
-        &_date{
+        &__date{
           color: #999999;
           font-size: 12px;
           padding-left: 10px;
         }
       }
-      &_message{
+      .Message{
         margin-top: 12px;
         &_content{
           color: #434a54;
@@ -130,30 +132,32 @@
     }
   }
   &_message-form{
+    box-sizing: border-box;
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 50px 20px 40px;
-    &_content{
+    &_outline{
       display: flex;
       justify-content: space-between;
-      &_bunch{
+      &_content{
         width: 100%;
         background-color: #ffffff;
         position: relative;
-        &_input{
+        &_bunch{
+          border: none;
           height: 50px;
           width: 100%;
           padding: 0 45px 0 15px;
         }
-        .input-box_image{
+        &_input-box_image{
           height: 50px;
           position: absolute;
           right: 10px;
-          .fa-image{
+          .far.fa-image{
             line-height: 50px;
             font-size: 25px;
           }
-          input{
+          &_hidden{
             display: none;
           }
         }

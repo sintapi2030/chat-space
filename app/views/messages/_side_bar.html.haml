@@ -13,8 +13,8 @@
   .Side-bar_group-list
     - current_user.groups.each do |group|
       .Side-bar_group-list_block
-        = link_to "#", class: "list_block_btn" do
+        = link_to group_messages_path(group.id), {class: "btn"} do
           .list_block-name
             = group.name
           .list_block-message
-            まだメッセージはありません
+            = group.show_last_message
